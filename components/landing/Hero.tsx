@@ -1,0 +1,109 @@
+"use client";
+
+import Image from "next/image";
+import { ArrowRight, MessageCircle, Phone } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const WHATSAPP_AMEDEO = "https://wa.me/393486724100";
+const WHATSAPP_MATTEO = "https://wa.me/393889524225";
+const TEL_AMEDEO = "tel:+393486724100";
+const TEL_MATTEO = "tel:+393889524225";
+
+export function Hero() {
+  return (
+    <section className="relative isolate overflow-hidden bg-[hsl(var(--background))]">
+      {/* Decorative background image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/assets/hero.jpg"
+          alt=""
+          aria-hidden="true"
+          fill
+          className="object-cover opacity-25"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background))]/80 via-[hsl(var(--background))]/70 to-[hsl(var(--background))]" />
+      </div>
+
+      <div className="mx-auto flex min-h-[88vh] max-w-6xl flex-col items-start justify-center px-6 py-24 sm:py-32 lg:px-8">
+        <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--card))]/80 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-[hsl(var(--muted-foreground))] backdrop-blur">
+          <span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))]" />
+          EasyBuild SV · Savona
+        </span>
+
+        <h1 className="font-display max-w-3xl text-5xl font-semibold leading-[1.05] text-[hsl(var(--foreground))] sm:text-6xl lg:text-7xl">
+          Ristrutturare casa
+          <br />
+          <span className="italic text-[hsl(var(--primary))]">senza impazzire.</span>
+        </h1>
+
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-[hsl(var(--muted-foreground))] sm:text-xl">
+          Un unico referente. Dalla tua idea alla casa finita.
+        </p>
+
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a
+            href="#richiesta"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-[hsl(var(--primary))] px-7 py-4 text-base font-semibold text-[hsl(var(--primary-foreground))] shadow-cta transition-all hover:-translate-y-px hover:bg-[hsl(var(--primary))]/90 hover:shadow-lg active:translate-y-0"
+          >
+            Richiedi un sopralluogo
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </a>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center justify-center gap-2 rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--card))] px-7 py-4 text-base font-semibold text-[hsl(var(--foreground))] transition-colors hover:border-[hsl(var(--foreground))]/30 hover:bg-[hsl(var(--muted))]">
+              <MessageCircle className="h-4 w-4 text-[hsl(var(--whatsapp))]" />
+              Contattaci direttamente
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-64">
+              <DropdownMenuLabel>Matteo Magliano</DropdownMenuLabel>
+              <DropdownMenuItem asChild>
+                <a
+                  href={WHATSAPP_MATTEO}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex cursor-pointer items-center gap-2"
+                >
+                  <MessageCircle className="h-4 w-4 text-[hsl(var(--whatsapp))]" />
+                  WhatsApp · 388 952 4225
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href={TEL_MATTEO} className="flex cursor-pointer items-center gap-2">
+                  <Phone className="h-4 w-4 text-[hsl(var(--primary))]" />
+                  Chiama · 388 952 4225
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuLabel>Amedeo Carlone</DropdownMenuLabel>
+              <DropdownMenuItem asChild>
+                <a
+                  href={WHATSAPP_AMEDEO}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex cursor-pointer items-center gap-2"
+                >
+                  <MessageCircle className="h-4 w-4 text-[hsl(var(--whatsapp))]" />
+                  WhatsApp · 348 672 4100
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href={TEL_AMEDEO} className="flex cursor-pointer items-center gap-2">
+                  <Phone className="h-4 w-4 text-[hsl(var(--primary))]" />
+                  Chiama · 348 672 4100
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </div>
+    </section>
+  );
+}

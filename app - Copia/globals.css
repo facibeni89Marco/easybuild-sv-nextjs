@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Background carta calda #F9F6F2 */
+    --background: 37 33% 96%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    /* Arancio cantiere #E8A020 */
+    --primary: 38 86% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Antracite #2C2C2C */
+    --secondary: 0 0% 17%;
+    --secondary-foreground: 37 33% 96%;
+
+    /* Beige chiaro */
+    --muted: 37 18% 92%;
+    --muted-foreground: 35 12% 42%;
+
+    --accent: 38 86% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Verde conferma */
+    --success: 120 27% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Verde WhatsApp #25D366 */
+    --whatsapp: 142 70% 49%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    /* Sezione scura #2C2C2C */
+    --surface-dark: 0 0% 17%;
+    --surface-dark-foreground: 37 33% 96%;
+
+    /* Bordi beige */
+    --border: 35 18% 85%;
+    --input: 35 18% 85%;
+    --ring: 38 86% 51%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}

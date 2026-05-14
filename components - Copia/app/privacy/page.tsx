@@ -1,0 +1,84 @@
+import type { Metadata } from "next";
+import { LegalLayout } from "@/components/legal/LegalLayout";
+
+export const metadata: Metadata = {
+  title: "Informativa Privacy — EasyBuild SV",
+  description:
+    "Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) di Easy Build S.R.L.",
+};
+
+export default function PrivacyPage() {
+  return (
+    <LegalLayout title="Informativa Privacy" updatedAt="20 aprile 2026">
+      <p>
+        La presente informativa è resa ai sensi dell'art. 13 del Regolamento UE 2016/679
+        (GDPR) e descrive le modalità con cui EasyBuild SRL tratta i dati personali degli
+        utenti che visitano il sito o richiedono un sopralluogo.
+      </p>
+
+      <h2>1. Titolare del trattamento</h2>
+      <p>
+        Il titolare del trattamento è <strong>Easy Build S.R.L.</strong>, con sede legale
+        in Via Paolo Gerolamo Brusco 1/4, 17100 Savona (SV).
+        <br />
+        P.IVA / Codice Fiscale: 01893670099 — REA: SV-238468 — Albo Imprese Artigiane: SV-62950
+        <br />
+        PEC:{" "}
+        <a href="mailto:easy.buildsrl@pec.it">easy.buildsrl@pec.it</a>
+        <br />
+        Email:{" "}
+        <a href="mailto:easybuild.savona@gmail.com">easybuild.savona@gmail.com</a>
+        <br />
+        Telefono / WhatsApp: Amedeo 348 672 4100 — Matteo +39 388 952 4225
+      </p>
+
+      <h2>2. Tipologie di dati trattati</h2>
+      <ul>
+        <li>
+          <strong>Dati di contatto</strong> forniti volontariamente tramite il form di
+          richiesta sopralluogo, WhatsApp o email.
+        </li>
+        <li>
+          <strong>Dati di navigazione</strong> raccolti automaticamente dai sistemi
+          informatici (indirizzi IP, log di accesso, tipo di browser).
+        </li>
+      </ul>
+
+      <h2>3. Finalità e base giuridica</h2>
+      <ul>
+        <li>Riscontro alle richieste di preventivo (art. 6.1.b GDPR).</li>
+        <li>Adempimenti contrattuali, fiscali e amministrativi (art. 6.1.c GDPR).</li>
+        <li>Miglioramento del sito e analisi statistica aggregata (art. 6.1.f GDPR).</li>
+      </ul>
+
+      <h2>4. Modalità di trattamento e conservazione</h2>
+      <p>
+        I dati sono trattati con strumenti informatici e cartacei. I dati di contatto sono
+        conservati per il tempo necessario all'evasione della richiesta e, in caso di
+        rapporto contrattuale, per 10 anni come previsto dalla normativa fiscale.
+      </p>
+
+      <h2>5. Comunicazione e trasferimento</h2>
+      <p>
+        I dati possono essere comunicati a consulenti e fornitori esterni nominati
+        responsabili del trattamento. Non è previsto il trasferimento fuori dall'UE.
+      </p>
+
+      <h2>6. Diritti dell'interessato</h2>
+      <p>
+        Ai sensi degli artt. 15-22 GDPR puoi esercitare i diritti di accesso, rettifica,
+        cancellazione, limitazione, portabilità e opposizione scrivendo a{" "}
+        <a href="mailto:easybuild.savona@gmail.com">easybuild.savona@gmail.com</a>. Hai
+        inoltre diritto di proporre reclamo al{" "}
+        <a
+          href="https://www.garanteprivacy.it"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Garante per la protezione dei dati personali
+        </a>
+        .
+      </p>
+    </LegalLayout>
+  );
+}
